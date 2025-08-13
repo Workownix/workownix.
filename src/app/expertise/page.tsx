@@ -39,7 +39,7 @@ export default function Expertise() {
     {
       title: "Graphic Designing",
       description: "We create visually stunning designs that captivate your audience.",
-      image: "/image/services/graphic-design.jpg",
+      image: "/image/services/graphic-design.png",
     },
     {
       title: "Content Writing & Creation",
@@ -54,7 +54,7 @@ export default function Expertise() {
     {
       title: "Digital Marketing & SEO",
       description: "We provide comprehensive digital marketing strategies to grow your business.",
-      image: "/images/services/digital-marketing.jpg",
+      image: "/image/services/digital-marketing.png",
     },
     {
       title: "HTML/CSS Development",
@@ -311,7 +311,7 @@ export default function Expertise() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="w-12 h-12 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition-all duration-300"
-          onClick={() => window.open("https://wa.me/923412901528", "_blank")}
+          onClick={() => window.open("https://whatsapp.com/channel/0029VbBDgPFChq6QBGUtKh3Q", "_blank")}
         >
           <MessageCircle className="w-6 h-6 mx-auto" />
         </motion.button>

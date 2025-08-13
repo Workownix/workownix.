@@ -25,7 +25,7 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-300 text-base max-w-md leading-relaxed">
-              Transforming businesses through innovative technology solutions. 
+              Transforming businesses through innovative technology solutions.
               We deliver cutting-edge digital experiences that drive growth and success.
             </p>
             <div className="flex flex-wrap gap-2">
@@ -33,28 +33,48 @@ export default function Footer() {
                 Web Development
               </span>
               <span className="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">
-               Graphic Designing
+                Graphic Designing
               </span>
               <span className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">
                 AI Solutions
               </span>
-               <span className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">
+              <span className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">
                 word press development
               </span>
-                 <span className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">
+              <span className="px-3 py-1 bg-purple-600/20 text-purple-300 rounded-full text-sm">
                 App development
               </span>
               <span className="px-3 py-1 bg-green-600/20 text-green-300 rounded-full text-sm">
-               chat boat
+                chat boat
               </span>
               <span className="px-3 py-1 bg-green-600/20 text-Purple-300 rounded-full text-sm">
-                python 
+                python
               </span>
             </div>
           </div>
 
           {/* Quick Links */}
+          {/* Quick Links */}
           <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-white">Quick Links</h3>
+            <ul className="space-y-2">
+              {['About', 'Services', 'Portfolio', 'Contact', 'Blog'].map((item) => {
+                const slug = `/${item.toLowerCase().replace(/\s+/g, '-')}`; // ✅ spaces → hyphens
+                return (
+                  <li key={item}>
+                    <Link
+                      href={slug}
+                      className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                    >
+                      {item}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+
+          {/* <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Quick Links</h3>
             <ul className="space-y-2">
               {['About Us', 'Services', 'Portfolio', 'Contact', 'Blog'].map((item) => (
@@ -68,13 +88,13 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact Info */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-white">Get In Touch</h3>
-                        <h3 className="text-lg font-semibold text-white">"if any person need a website or digital services? Workownix is 
-                          available 24/7 — contact us anytime and expect a response within 1–2 business days!"</h3>
+            <h3 className="text-lg font-semibold text-white">"if any person need a website or digital services? Workownix is
+              available 24/7 — contact us anytime and expect a response within 1–2 business days!"</h3>
             <div className="space-y-2 text-sm text-gray-400">
               <p>📧 info.workownix@gmail.com</p>
               <p>📞 +92 341 2901528</p>

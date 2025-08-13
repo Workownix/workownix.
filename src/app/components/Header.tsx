@@ -10,11 +10,13 @@ export default function Header() {
 
   const navItems = [
     { id: "home", label: "HOME", href: "/" },
+    { id: "about", label: "ABOUT", href: "/about" },
+    
     { id: "services", label: "SERVICES", href: "/services" },
-    { id: "portfolio", label: "PORTFOLIO", href: "/portfolio" },
+    //{ id: "portfolio", label: "PORTFOLIO", href: "/portfolio" },
     { id: "expertise", label: "EXPERTISE", href: "/expertise" },
-    { id: "website-development", label: "WEBSITE DEVELOPMENT", href: "/website-development" },
-    { id: "blogs", label: "BLOGS", href: "/blogs" },
+    { id: "Email", label: "Email", href: "/email"}, 
+    //{ id: "blogs", label: "BLOGS", href: "/blogs" },
     { id: "contact", label: "CONTACT US", href: "/contact" },
   ];
 

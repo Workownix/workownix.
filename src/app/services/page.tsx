@@ -118,7 +118,7 @@ const headingVariants = {
             {/* HERO Heading */}
         <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 text-center">
           <motion.h1
-            className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight mb-10"
+            className="text-3xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight mb-10"
             variants={headingVariants}
             initial="hidden"
             animate="visible"
@@ -339,7 +339,7 @@ const headingVariants = {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-lg transition-all duration-300"
-          onClick={() => window.open("https://wa.me/923412901528", "_blank")}
+          onClick={() => window.open("https://whatsapp.com/channel/0029VbBDgPFChq6QBGUtKh3Q", "_blank")}
         >
           <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 mx-auto" />
         </motion.button>
