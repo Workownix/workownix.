@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import {
   Users,
   Target,
@@ -26,6 +27,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
+import Link from "next/link"
 
 export default function AboutPage() {
   const [activeTab, setActiveTab] = useState("story")
@@ -158,18 +160,18 @@ export default function AboutPage() {
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <a href="/" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                <Link href="/" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                   Home
-                </a>
-                <a href="/about" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                </Link>
+                <Link href="/about" className="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                   About
-                </a>
-                <a href="/#services" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                </Link>
+                <Link href="/#services" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                   Services
-                </a>
-                <a href="/#contact" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+                </Link>
+                <Link href="/#contact" className="text-gray-600 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                   Contact
-                </a>
+                </Link>
               </div>
             </div>
             <Button onClick={handleWhatsAppClick} className="bg-green-600 hover:bg-green-700">
@@ -181,21 +183,22 @@ export default function AboutPage() {
       </nav>
 
       {/* Hero Section */}
-      <section
-        className="pt-16 bg-center bg-cover bg-gradient-to-br from-blue-50 via-white to-purple-50"
-        style={{
-          backgroundImage: "url('/image/coder1.jpg')",
-
-        }}
-      >
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="pt-16 bg-gradient-to-br from-blue-50 via-white to-purple-50 relative">
+        <Image
+          src="/image/coder1.jpg"
+          alt="Background"
+          fill
+          style={{ objectFit: "cover" }}
+          className="absolute inset-0 z-0"
+          priority
+        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 relative">
               <span className="relative z-10">About </span>
               <span className="relative inline-block">
-                <span className=" inset-0 bg-gradient-to-r from-white-600/20 to-purple-600/20 rounded-2xl transform -skew-y-1 scale-110"></span>
-                <span className=" inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl transform skew-y-1 scale-105"></span>
+                <span className="inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl transform -skew-y-1 scale-110"></span>
+                <span className="inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-2xl transform skew-y-1 scale-105"></span>
                 <span className="relative z-10 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent px-4">
                   Workownix
                 </span>
@@ -252,10 +255,11 @@ export default function AboutPage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-6 py-3 font-medium transition-colors ${activeTab === tab.id
+                className={`flex items-center gap-2 px-6 py-3 font-medium transition-colors ${
+                  activeTab === tab.id
                     ? "text-blue-600 border-b-2 border-blue-600"
                     : "text-gray-600 hover:text-blue-600"
-                  }`}
+                }`}
               >
                 {tab.icon}
                 {tab.label}
@@ -270,18 +274,18 @@ export default function AboutPage() {
                 <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Journey to Excellence</h2>
                 <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                   <p>
-                    <strong className="text-gray-900">Workownix</strong> was born from a simple yet powerful vision: to
+                    <strong className="text-gray-900">Workownix</strong> was born from a simple yet powerful vision to
                     democratize access to premium digital solutions for businesses of all sizes. Founded by a team of
-                    passionate technologists, we started our journey with the belief that every business deserves
+                    passionate technologists we started our journey with the belief that every business deserves
                     world-class digital presence.
                   </p>
                   <p>
                     What began as a small team of developers has evolved into a comprehensive digital agency serving
-                    clients across 25+ countries. Our growth story is built on one fundamental principle:{" "}
-                    <em>putting our clients' success at the heart of everything we do.</em>
+                    clients across 25+ countries. Our growth story is built on one fundamental principle:
+                    <em>putting our clients success at the heart of everything we do.</em>
                   </p>
                   <p>
-                    Today, we're proud to be the trusted digital partner for startups, SMEs, and enterprises worldwide.
+                    Today, we are proud to be the trusted digital partner for startups, SMEs, and enterprises worldwide.
                     Our diverse portfolio spans across industries, from e-commerce and healthcare to fintech and
                     education, proving our versatility and expertise.
                   </p>
@@ -334,11 +338,12 @@ export default function AboutPage() {
                   <Card key={index} className="text-center hover:shadow-lg transition-shadow">
                     <CardContent className="p-6">
                       <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-200">
-                        <img
+                        <Image
                           src={member.image || "/placeholder.svg"}
                           alt={member.name}
+                          width={96}
+                          height={96}
                           className="w-full h-full object-cover"
-                          crossOrigin="anonymous"
                         />
                       </div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
@@ -501,3 +506,4 @@ export default function AboutPage() {
     </div>
   )
 }
+

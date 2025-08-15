@@ -5,7 +5,7 @@ export default function TermsPage() {
     <div
       style={{
         minHeight: "100vh",
-        backgroundImage: "url(/placeholder-jheqf.png)",
+        backgroundImage: "url(/image/coder3.jpg)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",

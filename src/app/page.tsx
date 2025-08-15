@@ -1,6 +1,6 @@
 // app/page.tsx
 
-import Tech from "./synovexa/page";
+import Tech from "./Home/page";
 
 export default function HomePage() {
   return (
